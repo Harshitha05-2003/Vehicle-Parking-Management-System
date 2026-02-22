@@ -28,11 +28,11 @@
 
 ## Modules
 
--  User-Service Module - Atharva Pimple
--  Slot-Service Module - Bharadwaj M
--  Vehicle-log-Service Module - Vaishnavi P
--  Reservation-Service Module - Kapparapu Nikitha
--  Billing-Service Module - Team
+-  User-Service Module 
+-  Slot-Service Module
+-  Vehicle-log-Service Module 
+-  Reservation-Service Module 
+-  Billing-Service Module 
 ## Architecture Diagram 
 
 ```mermaid
@@ -217,12 +217,7 @@ Generates bills based on parking duration and processes payments securely. Suppo
 Once all the services are running, you can access the application through the API Gateway. Ensure that all services are registered with the Eureka Server.
 
 
-# Project Contributors 
 
-- Atharva Pimple
-- Bharadwaj M
-- Vaishnavi P
-- Kapparapu Nikitha 
 
 
 
