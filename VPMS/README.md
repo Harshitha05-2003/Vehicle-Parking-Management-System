@@ -16,14 +16,13 @@
     - [Reservation System Module](#Documentation/ReservationModule.md)
     - [Billing and Payments Module](#Documentation/BillingModule.md)
 - [How to Run This Project with Eureka and API Gateway](#how-to-run-this-project-with-eureka-and-api-gateway)
-- [Project Contributors](#project-contributors)
 
 
 ## Project Introduction
 * The Vehicle Parking Management System is a robust application crafted to optimize the management of parking spaces, streamline vehicle movements, handle reservations, and facilitate billing operations.
-* It ensures a seamless experience for administrators, staff, and customers by enabling real-time slot monitoring, effortless check-ins/check-outs, and secure transactions.
+* It provides functionality for administrators, staff, and customers to manage parking operations efficiently.
 * The system consists of well-defined components dedicated to user management, parking slot tracking, vehicle entry/exit logging, reservation handling, and automated billing.
-* Each module is developed to work in harmony, offering a scalable, secure, and maintainable solution for efficient vehicle parking services across various facility types such as malls, offices, and residential complexes.
+* The system is designed using microservices architecture to ensure modularity, scalability, and maintainability.
 
 
 ## Modules
@@ -139,11 +138,11 @@ Handles parking slot operations such as adding, updating, and checking availabil
 
 Logs vehicle movements and updates parking slot statuses dynamically. Provides a seamless tracking mechanism for entry and exit.
 
-[Reservation Management Module](https://github.com/Nikitha-Kapparapu/VPMS/blob/main/reservation-service/ReservationModule.md)
+[Reservation Management Module](reservation-service/ReservationModule.md)
 
 Enables users to book, modify, or cancel parking slots. Ensures smooth reservation management with real-time updates.
 
-[Billing and Payments Module](https://github.com/Nikitha-Kapparapu/VPMS/blob/main/billing-service/BillingModule.md)
+[Billing and Payments Module](billing-service/BillingModule.md)
 
 Generates bills based on parking duration and processes payments securely. Supports multiple payment methods for user convenience.
 
@@ -208,13 +207,13 @@ Generates bills based on parking duration and processes payments securely. Suppo
 
 8. **Start Billing Service**  
      - Clone or create the Billing Service Spring Boot project.  
-     - Run the Feedback Service:  
+     - Run the Billing Service:  
          ```bash
          cd billing-service
          mvn spring-boot:run
          ```
 
-Once all the services are running, you can access the application through the API Gateway. Ensure that all services are registered with the Eureka Server.
+Once all services are running locally, the application can be accessed through the API Gateway.
 
 
 
