@@ -21,7 +21,7 @@
 - **Project Name**: Vehicle Parking Management System (VPMS)
 - **Project Type**: Microservices-based Web Application
 - **Technology Stack**: Spring Boot, React.js, MySQL, JWT
-- **Project Duration**: 12 weeks (3 months)
+- **Project Duration**: 12 weeks
 - **Methodology**: Agile Scrum
 
 ### Project Objectives
