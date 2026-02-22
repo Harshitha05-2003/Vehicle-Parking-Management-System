@@ -458,28 +458,6 @@
 
 ---
 
-## Team Structure
-
-### Development Team
-- **Atharva Pimple** - User Service Module Lead
-- **Bharadwaj M** - Slot Service Module Lead
-- **Vaishnavi P** - Vehicle Log Service Module Lead
-- **Kapparapu Nikitha** - Reservation Service Module Lead
-
-### Roles and Responsibilities
-- **Scrum Master**: Facilitate Agile ceremonies and remove impediments
-- **Product Owner**: Define requirements and prioritize backlog
-- **Development Team**: Implement features and ensure quality
-- **DevOps Engineer**: Handle deployment and infrastructure
-
-### Communication
-- **Daily Standups**: 15 minutes daily
-- **Sprint Planning**: 2 hours at sprint start
-- **Sprint Review**: 1 hour at sprint end
-- **Sprint Retrospective**: 1 hour at sprint end
-
----
-
 ## Technical Architecture
 
 ### Microservices Architecture
