@@ -17,7 +17,6 @@
   - [Reservation System Module](#Documentation/ReservationModule.md)
   - [Billing and Payments Module](#Documentation/BillingModule.md)
 - [How to Run This Project with Eureka and API Gateway](#how-to-run-this-project-with-eureka-and-api-gateway)
-- [Project Contributors](#project-contributors)
 
 ## Project Introduction
 
@@ -39,62 +38,19 @@
 ```mermaid
 flowchart TD
 
-    subgraph Client [Client Applications]
-        A[Web App]
-        B[Mobile App]
-    end
+    A[React Web App] --> B[API Gateway]
+    B --> C[User Service]
+    B --> D[Slot Service]
+    B --> E[Vehicle Log Service]
+    B --> F[Reservation Service]
+    B --> G[Billing Service]
 
-    subgraph Gateway [API Gateway]
-        C[API Gateway]
-    end
-
-    subgraph Infra [Infrastructure Services]
-        D[Load Balancer]
-        E[Discovery Service]
-        F[Config Service]
-    end
-
-    subgraph Services [Microservices]
-        G[User Service] --> GDB[(User DB)]
-        H[Reservation Service] --> HDB[(Reservation DB)]
-        I[Parking Slot Service] --> IDB[(Parking DB)]
-        J[Billing Service] --> JDB[(Billing DB)]
-        K[Vehicle Log Service] --> KDB[(Vehicle Log DB)]
-    end
-
-    subgraph External [External Services]
-        M[Payment Gateway]
-    end
-
-    %% Connections
-    A --> C
-    B --> C
-    C --> D
-    D --> E
-    D --> F
-    C --> G
-    C --> H
-    C --> I
-    C --> J
-    C --> K
-    J --> M
-
-    %% Styling
-    classDef client fill:#e3f2fd,stroke:#2196f3,color:#0d47a1
-    classDef gateway fill:#fff3e0,stroke:#ff9800,color:#e65100
-    classDef infra fill:#ede7f6,stroke:#673ab7,color:#311b92
-    classDef service fill:#e8f5e9,stroke:#4caf50,color:#1b5e20
-    classDef external fill:#fce4ec,stroke:#f06292,color:#880e4f
-    classDef db fill:#f3e5f5,stroke:#ab47bc,color:#4a148c
-
-    class A,B client
-    class C gateway
-    class D,E,F infra
-    class G,H,I,J,K service
-    class M external
-    class GDB,HDB,IDB,JDB,KDB db
+    C --> CDB[(User DB)]
+    D --> DDB[(Slot DB)]
+    E --> EDB[(Vehicle Log DB)]
+    F --> FDB[(Reservation DB)]
+    G --> GDB[(Billing DB)]
 ```
-
 ## Technologies Used
 
 ### Backend
@@ -145,11 +101,11 @@ Handles parking slot operations such as adding, updating, and checking availabil
 
 Logs vehicle movements and updates parking slot statuses dynamically. Provides a seamless tracking mechanism for entry and exit.
 
-[Reservation Management Module](https://github.com/Nikitha-Kapparapu/VPMS/blob/main/reservation-service/ReservationModule.md)
+[Reservation Management Module](reservation-service/ReservationModule.md)
 
 Enables users to book, modify, or cancel parking slots. Ensures smooth reservation management with real-time updates.
 
-[Billing and Payments Module](https://github.com/Nikitha-Kapparapu/VPMS/blob/main/billing-service/BillingModule.md)
+[Billing and Payments Module](billing-service/BillingModule.md)
 
 Generates bills based on parking duration and processes payments securely. Supports multiple payment methods for user convenience.
 
@@ -162,7 +118,6 @@ Generates bills based on parking duration and processes payments securely. Suppo
 - MySQL running and configured in `application.properties`
 - Eureka Server (Spring Cloud Netflix Eureka)
 - API Gateway (Spring Cloud Gateway)
-- Spring Cloud Config Server
 
 ### Steps to Run
 
@@ -216,7 +171,7 @@ Generates bills based on parking duration and processes payments securely. Suppo
 
 7. **Start Billing Service**
    - Clone or create the Billing Service Spring Boot project.
-   - Run the Feedback Service:
+   - Run the Billing Service:
      ```bash
      cd billing-service
      mvn spring-boot:run
